@@ -7,8 +7,8 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone [https://github.com/](https://github.com/)[your-username]/chamali-apple-store.git
-   cd chamali-apple-store
+   git clone https://github.com/samichamali/App-and-Web-Development
+   cd App-and-Web-Development
 2. **Run the Docker Files**:
       ```bash
    docker-compose up --build

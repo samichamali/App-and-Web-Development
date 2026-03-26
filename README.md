@@ -12,8 +12,8 @@
 2. **Run the Docker Files**:
       ```bash
    docker-compose up --build
-  ´´
-   This make install the dependencies automatically and after 30 seconds to a minute, please head to http:// localhost on your browser and expect the website to be working there!
+      
+This make docker install the dependencies automatically and after 30 seconds to a minute, please head to http:// localhost on your browser and expect the website to be working there!
 
 
 

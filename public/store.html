@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="storepage.css">
+    <link rel="stylesheet" href="homepage.css">
+
+    <meta charset="UTF-8">
+    <title>Chamali Apple Store - Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top">
+    <a href="index.html" style="font-size: large; color: white; text-decoration: none;">Chamali Apple Store</a>
+    <div class="nav-extras">
+        <a href="cart.html" class="cart-btn">
+            View Cart <span id="cart-count">0</span>
+        </a>
+    </div>
+</div>
+
+<div class="maindiv">
+    <div class="mainsearchbox">
+        <input type="text" id="productSearch" placeholder="Search for products...">
+    </div>
+</div>
+<div class="displaydiv">
+    <div id="product-container">
+        <p>Loading the latest Apple gear...</p>
+    </div>
+</div>
+</body>
+<button id="openModalBtn" class="add-product-btn">+ Add Product</button>
+
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add New Apple Product</h2>
+        <form id="addProductForm">
+            <input type="text" name="name" placeholder="Product Name (e.g. iPhone 17)" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="number" name="price" placeholder="Price ($)" required>
+            <input type="text" name="category" placeholder="Category (iphone, mac, etc.)" required>
+            <input type="number" name="stock" placeholder="Stock Quantity" required>
+
+            <label for="imageUpload">Product Image:</label>
+            <input type="file" id="imageUpload" name="image" accept="image/*" required>
+
+            <button type="submit" class="submit-btn">Upload to Store</button>
+        </form>
+    </div>
+</div>
+</html>
+
+<script src="js/storeloading.js"></script>

@@ -1,0 +1,317 @@
+/*
+
+*/
+
+.maindiv{
+    display: flex;
+    padding-top: 150px;
+    padding-left: 45px;
+    padding-right: 45px;
+    justify-content: center; /* centers all the elements horizontally*/
+}
+
+.displaydiv {
+    /* Layout Section */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* Gap/Spacing Section */
+    column-gap: 0;
+    row-gap: 0;
+
+    /* Space Section Present under the main elemenst*/
+    margin: 0;
+    padding-top: 26px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.mainsearchbox input {
+    width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+
+    /* Apple-style look */
+    background-color: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Interaction: When the user clicks the box */
+.mainsearchbox input:focus {
+    background-color: #ffffff;
+    border-color: #0071e3; /* Classic Apple Blue */
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+}
+
+/* Optional: Style the placeholder text */
+.mainsearchbox input::placeholder {
+    color: #86868b;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    background-color: #d1d1d1;
+    border-radius: 28px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.product-info {
+    flex: 2; /* Takes up more space than the image */
+    padding-left: 40px;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1d1d1f;
+    word-wrap: break-word;
+}
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.buy-btn {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #0077ed;
+}
+
+.add-product-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    background: #0071e3;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 400px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.cart-btn {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #0071e3;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: background 0.2s ease;
+}
+
+.cart-btn:hover {
+    background-color: #0077ed;
+}
+
+#cart-count {
+    margin-left: 5px;
+    font-weight: bold;
+    background: white;
+    color: #0071e3;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.cart-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cart-title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+    color: #1d1d1f;
+}
+
+#cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#cart-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #d2d2d7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.total-line {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.payment-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.4s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0071e3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: #34c759;
+    margin-bottom: 20px;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

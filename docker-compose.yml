@@ -1,0 +1,25 @@
+services:
+  # The MongoDB Database has to be installed on the docker container in order to contain the information of the website.
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # This segment contains instructions for both the node server and the frontend (ports)
+  apple-server:
+    build: .
+    ports:
+      - "80:5000"
+    depends_on:
+      - db
+    environment:
+      - MONGO_URI=mongodb://db:27017/appleStore
+      - PORT=5000
+    volumes:
+      - ./uploads:/usr/src/app/uploads
+      - .:/usr/src/app
+
+volumes:
+  mongo_data:

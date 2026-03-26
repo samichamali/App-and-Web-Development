@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="storepage.css">
+  <link rel="stylesheet" href="homepage.css">
+
+  <meta charset="UTF-8">
+  <title>Chamali Apple Store - Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top">
+  <a href="store.html" style="font-size: large; color: white; text-decoration: none;">Chamali Apple Store</a>
+</div>
+
+<div class="cart-wrapper">
+  <h1 class="cart-title">Review your bag.</h1>
+
+  <div id="cart-items-container"></div>
+
+  <div id="cart-footer">
+    <div class="total-line">
+      <span>Total</span>
+      <span id="cart-total">$0</span>
+    </div>
+
+
+    <button id="real-checkout-btn" class="checkout-btn" style="display: none;">Check Out</button>
+    <div id="auth-notice" class="auth-notice" style="display: none;">
+      <p>Please <a href="login.html">Sign In</a> to complete your purchase.</p>
+    </div>
+  </div>
+</div>
+<div class="cart-wrapper" id="history-section" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #d2d2d7;">
+  <h2 class="cart-title" style="font-size: 28px;">Order History</h2>
+  <div id="order-history-container">
+    <p style="color: #86868b;">Loading your previous orders...</p>
+  </div>
+</div>
+<div id="payment-overlay" class="overlay" style="display: none;">
+  <div class="payment-card">
+    <div id="payment-loading">
+      <div class="spinner"></div>
+      <p>Connecting to PayPal...</p>
+    </div>
+
+    <div id="payment-success" style="display: none;">
+      <div class="success-icon">✓</div>
+      <h2>Payment Successful</h2>
+      <p>Your Apple order is being prepared.</p>
+      <button onclick="finishOrder()" class="checkout-btn">Return to Store</button>
+    </div>
+  </div>
+
+</div>
+<script src="js/cart.js"></script>
+</body>
+</html>

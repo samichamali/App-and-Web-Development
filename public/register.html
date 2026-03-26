@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="storepage.css">
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="login.css">
+
+  <meta charset="UTF-8">
+  <title>Chamali Apple Store - Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top">
+  <a href="store.html" class="logo">Chamali Apple Store</a>
+</div>
+
+<div class="login-wrapper">
+  <h1 class="cart-title" style="text-align: center;">Create Your Apple ID</h1>
+  <p style="text-align: center; color: #86868b; margin-bottom: 30px;">
+    One account is all you need for everything Apple.
+  </p>
+
+  <form id="registerForm">
+    <input type="text" id="regName" placeholder="Full Name" required>
+    <input type="email" id="regEmail" placeholder="Email address" required>
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+
+    <button type="submit" class="checkout-btn">Create Account</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 20px;">
+    Already have an account? <a href="login.html" style="color: #0071e3; text-decoration: none;">Sign in here.</a>
+  </p>
+</div>
+
+<script src="js/register.js"></script>
+</body>
+</html>
